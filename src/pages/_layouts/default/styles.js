@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Toolbar, Typography } from '@material-ui/core';
 
-export const Wrapper = styled('div')`
+export const Wrapper = styled.div`
   background: '#212121';
   height: 100%;
 `;
@@ -21,7 +21,7 @@ export const MenuTypography = styled(Typography)`
 
   @keyframes neon {
     from {
-      opacity: 0.8;
+      opacity: 0.7;
       text-shadow: 0 0 6px rgba(66, 66, 66, 0.92),
         0 0 30px rgba(66, 66, 66, 0.34), 0 0 12px rgba(20, 255, 236, 0.52),
         0 0 21px rgba(20, 255, 236, 0.92), 0 0 34px rgba(20, 255, 236, 0.78),
@@ -37,7 +37,7 @@ export const MenuTypography = styled(Typography)`
   }
 `;
 
-export const Menus = styled('div')`
+export const Menus = styled.div`
   align-items: center;
   display: flex;
   flex: 0.5;
