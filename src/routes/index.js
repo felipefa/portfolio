@@ -1,8 +1,9 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 
 import About from '~/pages/About';
 import Home from '~/pages/Home';
+import NotFound from '~/pages/NotFound';
 import Work from '~/pages/Work';
 
 export default function Routes() {
@@ -11,6 +12,8 @@ export default function Routes() {
       <Route path="/" exact component={Home} />
       <Route path="/about" component={About} />
       <Route path="/work" component={Work} />
+
+      <Redirect path="/" to="/error" component={NotFound} />
     </Switch>
   );
 }
