@@ -112,7 +112,9 @@ const DefaultLayout = ({ children }) => {
           ))}
         </VerticalMenus>
       )}
-      <div style={{ background, color, height: '100vh', paddingTop }}>
+      <div
+        style={{ background, color, height: window.innerHeight, paddingTop }}
+      >
         {children}
       </div>
     </Wrapper>
