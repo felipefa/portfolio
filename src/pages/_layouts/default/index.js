@@ -12,7 +12,7 @@ import {
 
 import { CustomToolbar, Menus, MenuTypography, Wrapper } from './styles';
 
-export default function DefaultLayout({ children }) {
+const DefaultLayout = ({ children }) => {
   const theme = useTheme();
   const background = theme.palette.background.default;
   const color = theme.palette.text.primary;
@@ -90,8 +90,10 @@ export default function DefaultLayout({ children }) {
       </div>
     </Wrapper>
   );
-}
+};
 
 DefaultLayout.propTypes = {
   children: PropTypes.element.isRequired,
 };
+
+export default DefaultLayout;

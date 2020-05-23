@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, Switch } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 
 import About from '~/pages/About';
 import Home from '~/pages/Home';
@@ -8,14 +8,13 @@ import Work from '~/pages/Work';
 
 import Route from './Route';
 
-export default function Routes() {
-  return (
-    <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/work" component={Work} />
+const Routes = () => (
+  <Switch>
+    <Route path="/" exact component={Home} />
+    <Route path="/about" component={About} />
+    <Route path="/work" component={Work} />
+    <Route path="/" to="/error" component={NotFound} />
+  </Switch>
+);
 
-      <Redirect path="/" to="/error" component={NotFound} />
-    </Switch>
-  );
-}
+export default Routes;
