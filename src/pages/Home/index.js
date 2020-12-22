@@ -1,9 +1,7 @@
 import React from 'react';
-import { useTheme } from '@material-ui/core';
+import { Link, useTheme } from '@material-ui/core';
 
-import underConstructionSvg from '~/images/under-construction.svg';
-
-import { Container, Headline, Image } from './styles';
+import { Container, Headline, Text } from './styles';
 
 const Home = () => {
   const theme = useTheme();
@@ -11,10 +9,23 @@ const Home = () => {
   return (
     <Container theme={theme}>
       <Headline color="primary" variant="h2">
-        Portfolio under construction!
+        Hello!
+        <br />
+        Nice to meet you.
       </Headline>
-
-      <Image alt="Site under construction" src={underConstructionSvg} />
+      <div>
+        <Text>
+          It&apos;s <Link href="/about">Felipe</Link> here, do you need a&nbsp;
+          <strong>Full Stack Web Developer</strong>,
+          <br />
+          who knows his way around <strong>Node.js</strong> and&nbsp;
+          <strong>React</strong>?
+        </Text>
+        <Text>
+          Check out <Link href="/work">my projects</Link>, maybe we can work
+          together!
+        </Text>
+      </div>
     </Container>
   );
 };
