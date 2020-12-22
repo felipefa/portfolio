@@ -8,11 +8,12 @@ import laptopImage from '../images/laptop-bg.png';
 import portfolioImage from '../images/portfolio.png';
 import screensPdfImage from '../images/screens-pdf.png';
 import vapaAiImage from '../images/vapa.ai.png';
+import vapaDashboardImage from '../images/vapa-dashboard.png';
 
 export default [
   {
     description: `I currently work as one of the front-end devs of VAPA, a tool for AI-driven Amazon Ads from Vorwärts GmbH.`,
-    image: 'https://www.vapa.ai/static/media/dashboard-filled.cdb9d2a3.png',
+    image: vapaDashboardImage,
     link: 'https://vapa.vorwaerts.com',
     title: 'VAPA',
     tech: ['React.js'],
