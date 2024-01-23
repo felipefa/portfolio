@@ -3,17 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --foreground-rgb: 49, 221, 211;
+  --background-start-rgb: 37, 20, 40;
+  --background-end-rgb: 37, 20, 40;
 }
 
 body {
@@ -24,6 +16,24 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+li,
+input,
+button,
+textarea {
+  font-family: var(--font-josefin-sans);
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 @layer utilities {

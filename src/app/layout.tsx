@@ -1,9 +1,9 @@
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+import { josefinSans, otomanopeeOne } from '@/shared/styles/fonts';
+
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Felipe Araujo',
@@ -18,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <SpeedInsights />
-      <body className={inter.className}>{children}</body>
+      <body className={`${otomanopeeOne.variable}  ${josefinSans.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
