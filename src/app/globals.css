@@ -4,8 +4,14 @@
 
 :root {
   --foreground-rgb: 49, 221, 211;
-  --background-start-rgb: 37, 20, 40;
-  --background-end-rgb: 37, 20, 40;
+  --background-rgb: 37, 20, 40;
+  --background-start-rgb: var(--background-rgb);
+  --background-end-rgb: var(--background-rgb);
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
