@@ -1,12 +1,10 @@
+import { Logo } from '@/components/logo';
 import { MenuItem } from '@/components/menuItem';
-import { otomanopeeOne } from '@/shared/styles/fonts';
 
 export function Navbar() {
   return (
     <nav className="flex">
-      <h1 className={`${otomanopeeOne.className} px-10 py-8 text-5xl`}>
-        Felipe
-      </h1>
+      <Logo />
       <div className="flex flex-1 justify-center pt-12">
         <MenuItem href="#about">About</MenuItem>
         <MenuItem href="#projects">Projects</MenuItem>
