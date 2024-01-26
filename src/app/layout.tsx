@@ -1,7 +1,7 @@
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 
-import { josefinSans, otomanopeeOne } from '@/shared/styles/fonts';
+import { audiowide, sourceSans } from '@/shared/fonts';
 
 import './globals.css';
 
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <SpeedInsights />
-      <body className={`${otomanopeeOne.variable}  ${josefinSans.variable}`}>
+      <body className={`${audiowide.variable} ${sourceSans.variable}`}>
         {children}
       </body>
     </html>

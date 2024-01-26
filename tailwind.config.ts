@@ -15,8 +15,8 @@ const config: Config = {
       },
     },
     fontFamily: {
-      sans: ['var(--font-josefin-sans)', "system-ui", "sans-serif"],
-      display: ['var(--font-otomanopee-one)'],
+      sans: ['var(--font-source-sans)', "system-ui", "sans-serif"],
+      display: ['var(--font-audiowide)'],
     }
   },
   plugins: [],

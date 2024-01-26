@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import { Navbar } from '@/components/navbar';
+import { audiowide } from '@/shared/fonts';
 import KoelnImage from '@/shared/images/köln.png';
 
 export function Home() {
@@ -9,7 +10,7 @@ export function Home() {
       <Navbar />
       <div className="flex flex-1 flex-col lg:flex-row mx-auto lg:mx-80">
         <div className="flex flex-1 flex-col items-center justify-center text-center">
-          <h1 className="text-4xl lg:text-8xl">
+          <h1 className={`${audiowide.className} text-4xl lg:text-8xl`}>
             Welcome<br></br>to my<br></br>portfolio
           </h1>
           <h2 className="mt-4 lg:mt-8 text-lg lg:text-3xl">
