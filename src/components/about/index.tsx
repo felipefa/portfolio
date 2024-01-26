@@ -13,8 +13,8 @@ export function About() {
             About
           </p>
         </div>
-        <div className="flex flex-1">
-          <div className="bg-[#45254B] min-h-[60%] my-auto rounded-sm shadow-2xl shadow-[rgba(69, 37, 75, 0.35)] w-full"></div>
+        <div className="flex flex-1 items-center justify-center">
+          <div className="bg-[#45254B] min-h-[60%] max-w-[60%] my-auto rounded-sm shadow-2xl shadow-[rgba(69, 37, 75, 0.35)] w-full"></div>
         </div>
       </div>
     </section>
