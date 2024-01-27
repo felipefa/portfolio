@@ -73,14 +73,14 @@ main {
 
 main:after {
   content: '';
-  animation: dotScroll 16s linear infinite;
+  animation: dotScroll 150s linear infinite;
   background-image: radial-gradient(
     circle,
     rgba(var(--foreground-rgb), 0.2) var(--dot-size),
     transparent 0
   );
   background-size: calc(14.2857142857% - 1px) 100px;
-  background-position: 5px 0;
+  background-position: top right;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -105,48 +105,6 @@ main:after {
   margin-left: auto;
 }
 
-@media (min-width: 360px) {
-  main:after {
-    max-width: 360px;
-  }
-}
-
-@media (min-width: 400px) {
-  main:after {
-    max-width: 400px;
-  }
-}
-
-@media (min-width: 640px) {
-  main:after {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  main:after {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  main:after {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  main:after {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  main:after {
-    max-width: 1536px;
-  }
-}
-
 @media (prefers-reduced-motion) {
   main:after {
     animation: none;
@@ -167,9 +125,9 @@ main:after {
 
 @keyframes dotScroll {
   0% {
-    background-position-y: 140px;
+    background-position: bottom left;
   }
   100% {
-    background-position-y: 0;
+    background-position: top right;
   }
 }
