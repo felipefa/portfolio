@@ -10,8 +10,11 @@
 }
 
 html {
+  color-scheme: dark;
   font-size: 16px;
+  position: relative;
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -45,5 +48,128 @@ textarea {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+main {
+  --dot-size: 1.25px;
+}
+
+@media (min-width: 640px) {
+  main {
+    --dot-size: 2px;
+  }
+}
+
+main {
+  --dot-size: 1.25px;
+}
+
+@media (min-width: 640px) {
+  main {
+    --dot-size: 2px;
+  }
+}
+
+main:after {
+  content: '';
+  animation: dotScroll 16s linear infinite;
+  background-image: radial-gradient(
+    circle,
+    rgba(var(--foreground-rgb), 0.2) var(--dot-size),
+    transparent 0
+  );
+  background-size: calc(14.2857142857% - 1px) 100px;
+  background-position: 5px 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  main:after {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  main:after {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+main:after {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 360px) {
+  main:after {
+    max-width: 360px;
+  }
+}
+
+@media (min-width: 400px) {
+  main:after {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 640px) {
+  main:after {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  main:after {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  main:after {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  main:after {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  main:after {
+    max-width: 1536px;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  main:after {
+    animation: none;
+  }
+}
+
+@media (min-width: 768px) {
+  main:after {
+    background-size: calc(8.3333333333% - 1px) 140px;
+  }
+}
+
+main:after {
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+}
+
+@keyframes dotScroll {
+  0% {
+    background-position-y: 140px;
+  }
+  100% {
+    background-position-y: 0;
   }
 }
