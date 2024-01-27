@@ -7,7 +7,7 @@ import KoelnImage from '@/shared/images/köln.png';
 export function Home() {
   return (
     <section className="flex min-h-screen flex-col justify-between" id="home">
-      <Navbar />
+      <Navbar hideLogo />
       <div className="flex flex-1 flex-col lg:flex-row mx-auto lg:mx-80">
         <div className="flex flex-1 flex-col items-center justify-center text-center">
           <h1 className={`${audiowide.className} text-4xl lg:text-8xl`}>

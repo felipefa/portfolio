@@ -1,10 +1,10 @@
 import { Logo } from '@/components/logo';
 import { MenuItem } from '@/components/menuItem';
 
-export function Navbar() {
+export function Navbar({ hideLogo = false }) {
   return (
     <nav className="flex">
-      <Logo />
+      {hideLogo ? null : <Logo />}
       <div className="flex flex-1 justify-center pt-12">
         <MenuItem href="#about">About</MenuItem>
         <MenuItem href="#projects">Projects</MenuItem>
