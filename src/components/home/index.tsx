@@ -11,14 +11,14 @@ export function Home() {
     <section className="flex min-h-screen flex-col justify-between" id="home">
       <Navbar />
       <div className="flex flex-1 flex-col xl:flex-row xl:w-4xl xl:mx-32">
-        <div className="flex flex-1 flex-col items-center justify-center text-center mt-8 xl:mt-0">
+        <div className="flex flex-1 flex-col items-center justify-center px-4 text-center mt-8 xl:mt-0">
           <h1
             className={`${audiowide.className} text-6xl md:text-7xl lg:text-8xl whitespace-pre-line`}
           >
             {`Welcome\nto my\n`}
             <span className="portfolio transition-all ">portfolio!</span>
           </h1>
-          <h2 className="mt-4 lg:mt-8 text-lg lg:text-2xl text-shadow whitespace-pre-line">
+          <h2 className="mt-4 lg:mt-8 text-lg md:text-xl lg:text-2xl text-shadow whitespace-pre-line">
             Hi, I’m Felipe and I love building innovative software!
           </h2>
         </div>
