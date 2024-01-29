@@ -9,7 +9,7 @@ import './styles.css';
 export function Home() {
   return (
     <section className="flex min-h-screen flex-col justify-between" id="home">
-      <Navbar hideLogo />
+      <Navbar />
       <div className="flex flex-1 flex-col xl:flex-row xl:w-4xl xl:mx-32">
         <div className="flex flex-1 flex-col items-center justify-center text-center mt-8 xl:mt-0">
           <h1
