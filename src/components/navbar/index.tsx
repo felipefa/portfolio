@@ -1,23 +1,10 @@
 'use client';
 
-import React, { HTMLAttributes } from 'react';
+import { IconContext, List, X } from '@phosphor-icons/react';
+import React from 'react';
 
 import { Logo } from '@/components/logo';
-import { MenuItem } from '@/components/menuItem';
-
-function MenuOptions(props: HTMLAttributes<HTMLDivElement>) {
-  return (
-    <div {...props}>
-      <MenuItem href="#about">About</MenuItem>
-      <MenuItem href="#projects">Projects</MenuItem>
-      <MenuItem href="https://www.linkedin.com/in/felipe-araujo77">
-        LinkedIn
-      </MenuItem>
-      <MenuItem href="https://github.com/felipefa">GitHub</MenuItem>
-      <MenuItem href="mailto:devaraujofelipe@gmail.com">E-mail</MenuItem>
-    </div>
-  );
-}
+import { MenuOptions } from '@/components/menuOptions';
 
 export function Navbar() {
   const [isMenuOpen, toggleIsMenuOpen] = React.useReducer(
@@ -26,26 +13,35 @@ export function Navbar() {
   );
 
   return (
-    <>
+    <IconContext.Provider
+      value={{
+        className: 'mr-2 mt-0.5',
+        color: '#31ddd3',
+        size: 20,
+        weight: 'bold',
+      }}
+    >
       <div className="sticky top-0 flex items-center justify-between py-4 px-6">
         <div className="flex flex-1">
           <Logo />
         </div>
-        <button className="" onClick={toggleIsMenuOpen}>
-          <span className={`${isMenuOpen ? 'hidden' : 'block'} xl:hidden`}>
-            Open menu
+        <button className="text-xl uppercase" onClick={toggleIsMenuOpen}>
+          <span className={`${isMenuOpen ? 'hidden' : 'flex'} xl:hidden`}>
+            <List className="mr-2 mt-1" />
+            Menu
           </span>
-          <span className={`${isMenuOpen ? 'block' : 'hidden'} xl:hidden`}>
-            Close menu
+          <span className={`${isMenuOpen ? 'flex' : 'hidden'} xl:hidden`}>
+            <X className="mr-2 mt-1" />
+            Close
           </span>
         </button>
-        <MenuOptions className={`hidden xl:flex justify-center`} />
+        <MenuOptions className="hidden xl:flex justify-center" />
       </div>
       <MenuOptions
         className={`${
           isMenuOpen ? 'flex flex-col' : 'hidden'
         } items-center justify-center`}
       />
-    </>
+    </IconContext.Provider>
   );
 }
