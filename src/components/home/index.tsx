@@ -16,7 +16,7 @@ export function Home() {
             className={`${audiowide.className} text-6xl md:text-7xl lg:text-8xl whitespace-pre-line`}
           >
             {`Welcome\nto my\n`}
-            <span className="portfolio transition-all ">portfolio!</span>
+            <span className="portfolio transition-all">portfolio!</span>
           </h1>
           <h2 className="mt-4 lg:mt-8 text-lg md:text-xl lg:text-2xl text-shadow whitespace-pre-line">
             Hi, I’m Felipe and I love building innovative software!
