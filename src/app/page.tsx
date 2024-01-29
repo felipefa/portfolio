@@ -3,7 +3,7 @@ import { Home } from '@/components/home';
 
 export default function Main() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <Home />
       <About />
     </main>
