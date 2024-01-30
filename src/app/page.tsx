@@ -1,11 +1,13 @@
 import { About } from '@/components/about';
-import { Home as HomeComponent } from '@/components/home';
+import { Home } from '@/components/home';
+import { Navbar } from '@/components/navbar';
 
-export default function Home() {
+export default function Main() {
   return (
-    <>
-      <HomeComponent />
+    <main>
+      <Navbar />
+      <Home />
       <About />
-    </>
+    </main>
   );
 }
