@@ -21,27 +21,29 @@ export function Navbar() {
         weight: 'bold',
       }}
     >
-      <div className="sticky top-0 flex items-center justify-between py-4 px-6">
-        <div className="flex flex-1">
-          <Logo />
+      <nav className="sticky top-0 z-50">
+        <div className="flex items-center justify-between py-4 px-6">
+          <div className="flex flex-1">
+            <Logo />
+          </div>
+          <button className="text-xl uppercase" onClick={toggleIsMenuOpen}>
+            <span className={`${isMenuOpen ? 'hidden' : 'flex'} xl:hidden`}>
+              <List className="mr-2 mt-1" />
+              Menu
+            </span>
+            <span className={`${isMenuOpen ? 'flex' : 'hidden'} xl:hidden`}>
+              <X className="mr-2 mt-1" />
+              Close
+            </span>
+          </button>
+          <MenuOptions className="hidden xl:flex justify-center" />
         </div>
-        <button className="text-xl uppercase" onClick={toggleIsMenuOpen}>
-          <span className={`${isMenuOpen ? 'hidden' : 'flex'} xl:hidden`}>
-            <List className="mr-2 mt-1" />
-            Menu
-          </span>
-          <span className={`${isMenuOpen ? 'flex' : 'hidden'} xl:hidden`}>
-            <X className="mr-2 mt-1" />
-            Close
-          </span>
-        </button>
-        <MenuOptions className="hidden xl:flex justify-center" />
-      </div>
-      <MenuOptions
-        className={`${
-          isMenuOpen ? 'flex flex-col' : 'hidden'
-        } items-center justify-center`}
-      />
+        <MenuOptions
+          className={`${
+            isMenuOpen ? 'flex flex-col' : 'hidden'
+          } items-center justify-center`}
+        />
+      </nav>
     </IconContext.Provider>
   );
 }

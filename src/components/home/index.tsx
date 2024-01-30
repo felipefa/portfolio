@@ -1,6 +1,5 @@
 import Image from 'next/image';
 
-import { Navbar } from '@/components/navbar';
 import { audiowide } from '@/shared/fonts';
 import KoelnImage from '@/shared/images/köln.png';
 
@@ -9,7 +8,6 @@ import './styles.css';
 export function Home() {
   return (
     <section className="flex min-h-screen flex-col justify-between" id="home">
-      <Navbar />
       <div className="flex flex-1 flex-col xl:flex-row xl:w-4xl xl:mx-32">
         <div className="flex flex-1 flex-col items-center justify-center px-4 text-center mt-8 xl:mt-0">
           <h1

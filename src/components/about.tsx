@@ -1,12 +1,9 @@
-import { Navbar } from '@/components/navbar';
-
 export function About() {
   return (
     <section
       className="bg-[rgba(0,0,0,0.25)] flex flex-col justify-between min-h-screen"
       id="about"
     >
-      <Navbar />
       <div className="flex flex-1">
         <div className="flex items-center">
           <p className="text-[#45254B] font-display text-9xl -rotate-90">
