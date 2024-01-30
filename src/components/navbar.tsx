@@ -48,7 +48,7 @@ export function Navbar() {
         <MenuOptions
           className={`${
             isMenuOpen ? 'flex flex-col' : 'hidden'
-          } items-center justify-center pb-4`}
+          } items-center justify-center pb-4 border-[rgba(var(--foreground-rgb),0.15)] border-b-2 mb-8`}
           closeMenu={closeMenu}
         />
       </nav>
