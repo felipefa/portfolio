@@ -7,10 +7,10 @@ import { Logo } from '@/components/logo';
 import { MenuOptions } from '@/components/menuOptions';
 
 export function Navbar() {
-  const [isMenuOpen, toggleIsMenuOpen] = React.useReducer(
-    (state) => !state,
-    false
-  );
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const closeMenu = React.useCallback(() => setIsMenuOpen(false), []);
+  const openMenu = React.useCallback(() => setIsMenuOpen(true), []);
 
   return (
     <IconContext.Provider
@@ -21,12 +21,19 @@ export function Navbar() {
         weight: 'bold',
       }}
     >
-      <nav className="sticky top-0 z-50">
+      <nav
+        className={`sticky top-0 z-50 transition-colors ${
+          isMenuOpen ? 'bg-[rgb(var(--background-rgb))]' : ''
+        }`}
+      >
         <div className="flex items-center justify-between py-4 px-6">
           <div className="flex flex-1">
-            <Logo />
+            <Logo onClick={isMenuOpen ? closeMenu : undefined} />
           </div>
-          <button className="text-xl uppercase" onClick={toggleIsMenuOpen}>
+          <button
+            className="text-xl uppercase"
+            onClick={isMenuOpen ? closeMenu : openMenu}
+          >
             <span className={`${isMenuOpen ? 'hidden' : 'flex'} xl:hidden`}>
               <List className="mr-2 mt-1" />
               Menu
@@ -41,7 +48,8 @@ export function Navbar() {
         <MenuOptions
           className={`${
             isMenuOpen ? 'flex flex-col' : 'hidden'
-          } items-center justify-center`}
+          } items-center justify-center pb-4`}
+          closeMenu={closeMenu}
         />
       </nav>
     </IconContext.Provider>
