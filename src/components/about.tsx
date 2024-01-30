@@ -1,19 +1,13 @@
 export function About() {
   return (
     <section
-      className="bg-[rgba(0,0,0,0.25)] flex flex-col justify-between min-h-screen"
+      className="flex flex-1 flex-col items-center justify-center min-h-svh h-svh"
       id="about"
     >
-      <div className="flex flex-1">
-        <div className="flex items-center">
-          <p className="text-[#45254B] font-display text-9xl -rotate-90">
-            About
-          </p>
-        </div>
-        <div className="flex flex-1 items-center justify-center">
-          <div className="bg-[#45254B] min-h-[60%] max-w-[60%] my-auto rounded-sm shadow-2xl shadow-[rgba(69, 37, 75, 0.35)] w-full"></div>
-        </div>
-      </div>
+      <p className="text-[rgba(var(--foreground-rgb),0.15)] font-display text-9xl">
+        About
+      </p>
+      <div className="border-[rgba(var(--foreground-rgb),0.15)] border-solid border-2 bg-[rgb(var(--background-rgb))] min-h-[50%] min-w-80 w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] max-w-[960px]  rounded-2xl shadow-2xl shadow-[rgba(var(--foreground-rgb),0.15)]"></div>
     </section>
   );
 }
