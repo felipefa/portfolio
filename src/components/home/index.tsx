@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { audiowide } from '@/shared/fonts';
+import { audiowide, sourceSans } from '@/shared/fonts';
 import KoelnImage from '@/shared/images/köln.png';
 
 import './styles.css';
@@ -18,7 +18,9 @@ export function Home() {
           {`Welcome\nto my\n`}
           <span className="portfolio transition-all">portfolio!</span>
         </h1>
-        <h2 className="mt-4 lg:mt-8 text-lg md:text-xl lg:text-2xl text-shadow whitespace-pre-line">
+        <h2
+          className={`${sourceSans.className} mt-4 lg:mt-8 text-lg md:text-xl lg:text-2xl text-shadow whitespace-pre-line`}
+        >
           Hi, I’m Felipe and I love building innovative software!
         </h2>
       </div>
