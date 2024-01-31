@@ -2,7 +2,11 @@ import { ArrowsOutSimple, Minus, X } from '@phosphor-icons/react/dist/ssr';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { stackoverflowDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
+import { getExperienceAsString } from '@/shared/utils/getExperienceAsString';
+
 export function About() {
+  const experience = getExperienceAsString();
+
   return (
     <section
       className="flex flex-1 flex-col items-center justify-center min-h-svh h-svh"
@@ -27,8 +31,9 @@ export function About() {
             language="json"
             showLineNumbers
             style={stackoverflowDark}
+            wrapLines
           >
-            {`{\n\t"myName": "Felipe Araujo",\n\t"myExperience": "8+ years",\n\t"myMainSkills": ["React", "React Native", "TypeScript", "Node.js"],\n\t"myEducation": "Bachelor in Computer Science",\n\t"myCurrentLocation": "Cologne, Germany",\n\t"languages": ["English", "Portuguese"]\n}`}
+            {`{\n\t"myName": "Felipe Araujo",\n\t"myExperience": "${experience}",\n\t"myMainSkills": ["React", "React Native", "TypeScript", "Node.js"],\n\t"myEducation": "Bachelor in Computer Science",\n\t"myCurrentLocation": "Cologne, Germany",\n\t"languages": ["English", "Portuguese"]\n}`}
           </SyntaxHighlighter>
         </div>
       </div>
