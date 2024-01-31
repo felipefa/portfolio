@@ -22,7 +22,7 @@ export function Navbar() {
       }}
     >
       <nav
-        className={`sticky top-0 z-50 transition-colors ${
+        className={`sticky top-0 z-50 transition-colors bg-gradient-to-b from-[#251428] to-100% ${
           isMenuOpen ? 'bg-[rgb(var(--background-rgb))]' : ''
         }`}
       >
