@@ -14,11 +14,11 @@ export function About() {
           <X className="mr-2" />
           <Minus className="mr-2" />
           <ArrowsOutSimple />
-          <p className="text-center flex-1 text-lg">code</p>
+          <p className="text-center flex-1 text-lg -ml-16">code</p>
         </div>
         <div className="flex flex-1 p-4">
           <p className="overflow-auto whitespace-pre-wrap text-lg text-[#F2E48A]">
-            {`{\n\tmyName: "Felipe Araujo",\n\tmyExperience: "8+ years",\n\tmyMainSkills: ["React", "TypeScript", "Node.js", "React Native"],\n\tmyEducation: "Bachelor in Computer Science",\n\tmyCurrentLocation: "Cologne, Germany",\n\tlanguages: ["English", "Portuguese"]\n}`}
+            {`{\n\t"myName": "Felipe Araujo",\n\t"myExperience": "8+ years",\n\t"myMainSkills": ["React", "React Native", "TypeScript", "Node.js"],\n\t"myEducation": "Bachelor in Computer Science",\n\t"myCurrentLocation": "Cologne, Germany",\n\t"languages": ["English", "Portuguese"]\n}`}
           </p>
         </div>
       </div>
