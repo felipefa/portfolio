@@ -16,7 +16,21 @@ export function getExperienceAsString() {
       months += 12;
     }
 
-    return `${years} years, ${months} months and ${days} days of experience`;
+    const dayOrDays = days === 1 ? 'day' : 'days';
+    const monthOrMonths = months === 1 ? 'month' : 'months';
+    let experienceString = `${years} years`;
+
+    if (months > 0) {
+      if (days > 0) {
+        experienceString += `, ${months} ${monthOrMonths} and ${days} ${dayOrDays}`;
+      } else {
+        experienceString += ` and ${months} ${monthOrMonths}`;
+      }
+    } else if (days > 0) {
+      experienceString += ` and ${days} ${dayOrDays}`;
+    }
+
+    return experienceString;
   } catch (error) {
     const now = new Date();
     const currentYear = now.getFullYear();
