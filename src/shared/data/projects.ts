@@ -34,14 +34,14 @@ export const projects = [
     key: 'vapa',
     description: `I was the main front-end developer of VAPA, a tool for AI-driven Amazon Ads from Vorwärts GmbH.`,
     title: 'VAPA',
-    tech: ['React.js', 'Redux'],
+    tech: ['React.js', 'Redux', 'MaterialUI'],
   },
   {
     key: 'vapa-landing-page',
     description: `I led the reconstruction of VAPA's landing page.`,
     link: 'https://www.vapa.ai',
     title: 'VAPA Landing Page',
-    tech: ['React.js', 'TailwindCSS'],
+    tech: ['React.js', 'TailwindCSS', 'GSAP'],
   },
   {
     key: 'skipt',
@@ -61,14 +61,14 @@ export const projects = [
     description: `An app for Android, iOS and Web that was my very first experience with UI/UX. This app was built with the partnership of a friend that was responsible for the back-end, while I was responsible for the whole front-end.`,
     github: 'https://github.com/frederikocmr/InquilioApp',
     title: 'Inquilio',
-    tech: ['Ionic 3', 'Firebase'],
+    tech: ['Ionic 3', 'TypeScript', 'Firebase'],
   },
   {
     key: 'sgbd',
     description: `A simplified grades control system built in 2018 as the final project for a subject focused on database management systems.`,
     github: 'https://github.com/felipefa/controle-notas-sgbd',
     title: 'Grades Control System',
-    tech: ['Node.js', 'MySQL'],
+    tech: ['Node.js', 'MySQL', 'EJS'],
   },
   {
     key: 'expense-among-friends',

@@ -22,8 +22,8 @@ export function Navbar() {
       }}
     >
       <nav
-        className={`sticky top-0 z-50 transition-colors bg-gradient-to-b from-[#251428] to-100% ${
-          isMenuOpen ? 'bg-[rgb(var(--background-rgb))]' : ''
+        className={`sticky top-0 z-50 transition-colors bg-gradient-to-b from-purple-950 to-100% ${
+          isMenuOpen ? 'bg-purple-950' : ''
         }`}
       >
         <div className="flex items-center justify-between py-4 px-6">
@@ -48,7 +48,7 @@ export function Navbar() {
         <MenuOptions
           className={`${
             isMenuOpen ? 'flex flex-col' : 'hidden'
-          } items-center justify-center pb-4 border-[rgba(var(--foreground-rgb),0.15)] border-b-2 mb-8`}
+          } items-center justify-center pb-4 border-primary-500/15 border-b-2 mb-8`}
           closeMenu={closeMenu}
         />
       </nav>
