@@ -3,7 +3,7 @@ import { projects } from '@/shared/data/projects';
 export function Projects() {
   return (
     <section className="relative min-h-svh h-svh pb-8" id="projects">
-      <h2 className="absolute text-[rgba(var(--foreground-rgb),0.15)] text-7xl md:text-8xl font-display -z-10 text-center w-full xl:top-1/3">
+      <h2 className="absolute text-primary-500/15 text-7xl md:text-8xl font-display -z-10 text-center w-full xl:top-1/3">
         Projects
       </h2>
       <div className="h-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 py-20 px-8 max-w-5xl mx-auto">
