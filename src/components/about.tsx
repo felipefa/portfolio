@@ -15,7 +15,7 @@ export function About() {
       <p className="xl:-rotate-90 text-primary-500/15 font-display text-7xl md:text-8xl mb-8 xl:mb-0">
         About
       </p>
-      <div className="border-primary-500/15 border-2 bg-purple-950 min-h-80 h-[50%] xl:max-h-96 min-w-80 w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] max-w-[960px] rounded-2xl shadow-2xl shadow-primary-500/15 flex flex-col overflow-hidden xl:-ml-28">
+      <div className="border-primary-500/15 border-2 bg-purple-950 min-h-80 xl:max-h-96 min-w-80 w-[80%] lg:w-[70%] xl:w-[50%] max-w-6xl rounded-2xl shadow-2xl shadow-primary-500/15 flex flex-col overflow-hidden xl:-ml-28">
         <div className="border-primary-500/15 border-b-2 flex items-center px-4 py-2">
           <X className="mr-2" />
           <Minus className="mr-2" />
