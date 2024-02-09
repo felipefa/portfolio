@@ -1,7 +1,7 @@
 export const projects = [
   {
     key: 'hans',
-    description: `A React Native chatbot app I built with ChatGPT and Google Cloud Vision integration.`,
+    description: `A React Native chatbot app I built (including its architecture and design) integrating with ChatGPT and Google Cloud Vision.`,
     title: 'Hausaufgaben Hans',
     tech: ['React Native', 'TypeScript', 'Expo', 'ChatGPT', 'Firebase', 'Google Cloud Vision', 'Google AdMob'],
   },
