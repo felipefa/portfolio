@@ -18,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <SpeedInsights />
-      <body className={`${audiowide.variable} ${sourceSans.variable}`}>
+      <body
+        className={`${audiowide.variable} ${sourceSans.variable} antialiased`}
+      >
         {children}
       </body>
     </html>

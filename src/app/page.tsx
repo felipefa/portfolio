@@ -5,7 +5,7 @@ import { Projects } from '@/components/projects';
 
 export default function Main() {
   return (
-    <main>
+    <main className="animate-opacity">
       <Navbar />
       <Home />
       <About />
