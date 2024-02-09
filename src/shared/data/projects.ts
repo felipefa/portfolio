@@ -1,4 +1,21 @@
-export const projects = [
+export interface Project {
+  key: string;
+  description: string;
+  title: string;
+  github?: string;
+  link?: string;
+  tech: string[];
+}
+
+export const projects: Project[] = [
+  {
+    key: 'react-notes',
+    description: `A note-taking app with automatic audio to text conversion built with React.js and TypeScript.`,
+    title: 'React Notes',
+    github: 'https://github.com/felipefa/react-notes',
+    link: 'https://react-audio-notes.vercel.app/',
+    tech: ['React.js', 'TypeScript', 'Web Speech API', 'TailwindCSS', 'Vercel'],
+  },
   {
     key: 'hans',
     description: `A React Native chatbot app I built (including its architecture and design) integrating with ChatGPT and Google Cloud Vision.`,
