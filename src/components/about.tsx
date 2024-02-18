@@ -2,6 +2,7 @@ import { ArrowsOutSimple, Minus, X } from '@phosphor-icons/react/dist/ssr';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { stackoverflowDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
+import { SectionTitle } from '@/components/sectionTitle';
 import { getExperienceAsString } from '@/shared/utils/getExperienceAsString';
 
 export function About() {
@@ -12,9 +13,7 @@ export function About() {
       className="flex flex-1 flex-col xl:flex-row items-center justify-center min-h-svh h-svh"
       id="about"
     >
-      <p className="xl:-rotate-90 text-primary-500 font-display text-7xl md:text-8xl mb-8 xl:mb-0">
-        About
-      </p>
+      <SectionTitle className="mb-8 xl:mb-0 xl:-rotate-90">About</SectionTitle>
       <div className="border-primary-500/15 border-2 bg-purple-950 min-h-80 xl:max-h-96 min-w-80 w-[80%] lg:w-[70%] xl:w-[50%] max-w-6xl rounded-2xl shadow-2xl shadow-primary-500/15 flex flex-col overflow-hidden xl:-ml-28">
         <div className="border-primary-500/15 border-b-2 flex items-center px-4 py-2">
           <X className="mr-2" />
