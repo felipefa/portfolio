@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { audiowide, sourceSans } from '@/shared/fonts';
+import { SectionTitle } from '@/components/sectionTitle';
 import KoelnImage from '@/shared/images/köln.png';
 
 import './styles.css';
@@ -12,14 +12,14 @@ export function Home() {
       id="home"
     >
       <div className="flex xl:flex-1 flex-col items-center justify-center px-4 text-center mt-8 xl:mt-0">
-        <h1
-          className={`${audiowide.className} text-5xl md:text-6xl lg:text-7xl xl:text-8xl whitespace-pre-line`}
-        >
+        <SectionTitle className="whitespace-pre-line">
           {`Welcome\nto my\n`}
           <span className="portfolio transition-all">portfolio!</span>
-        </h1>
+        </SectionTitle>
         <h2
-          className={`${sourceSans.className} mt-4 lg:mt-8 text-lg md:text-xl lg:text-2xl text-shadow whitespace-pre-line`}
+          className={
+            'font-sans mt-4 lg:mt-8 text-lg md:text-xl lg:text-2xl text-shadow whitespace-pre-line'
+          }
         >
           Hi, I’m Felipe and I love building innovative software!
         </h2>
