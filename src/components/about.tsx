@@ -12,7 +12,7 @@ export function About() {
       className="flex flex-1 flex-col xl:flex-row items-center justify-center min-h-svh h-svh"
       id="about"
     >
-      <p className="xl:-rotate-90 text-primary-500 font-display text-7xl md:text-8xl mb-8 xl:mb-0">
+      <p className="xl:-rotate-90 text-primary-500 font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-8 xl:mb-0">
         About
       </p>
       <div className="border-primary-500/15 border-2 bg-purple-950 min-h-80 xl:max-h-96 min-w-80 w-[80%] lg:w-[70%] xl:w-[50%] max-w-6xl rounded-2xl shadow-2xl shadow-primary-500/15 flex flex-col overflow-hidden xl:-ml-28">

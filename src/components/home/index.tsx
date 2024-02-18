@@ -13,7 +13,7 @@ export function Home() {
     >
       <div className="flex xl:flex-1 flex-col items-center justify-center px-4 text-center mt-8 xl:mt-0">
         <h1
-          className={`${audiowide.className} text-6xl md:text-7xl lg:text-8xl whitespace-pre-line`}
+          className={`${audiowide.className} text-5xl md:text-6xl lg:text-7xl xl:text-8xl whitespace-pre-line`}
         >
           {`Welcome\nto my\n`}
           <span className="portfolio transition-all">portfolio!</span>
