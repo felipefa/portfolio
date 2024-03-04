@@ -40,7 +40,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className="bg-purple-900/50 flex flex-col gap-5 p-6 rounded-xl hover:ring-2 hover:ring-primary-500 hover:shadow-2xl hover:shadow-primary-500/20 transition-all cursor-pointer">
       <div className="flex flex-col">
-        <time className="text-primary-500/90">
+        <time
+          className="text-primary-500/90"
+          dateTime={project.date.getFullYear().toString()}
+        >
           {project.date.getFullYear()}
         </time>
         <h3 className="font-display line-clamp-1 text-xl">{project.title}</h3>
