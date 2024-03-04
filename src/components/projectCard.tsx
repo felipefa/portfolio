@@ -38,7 +38,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   }, []);
 
   return (
-    <div className="bg-purple-900/50 flex flex-col gap-5 p-6 rounded-xl hover:ring-2 hover:ring-primary-500 hover:shadow-2xl hover:shadow-primary-500/20 transition-all cursor-pointer">
+    <div className="flex flex-col gap-5 p-6 transition-all cursor-pointer bg-purple-900/50 rounded-xl hover:ring-2 hover:ring-primary-500 hover:shadow-2xl hover:shadow-primary-500/20">
       <div className="flex flex-col">
         <time
           className="text-primary-500/90"
@@ -46,12 +46,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
         >
           {project.date.getFullYear()}
         </time>
-        <h3 className="font-display line-clamp-1 text-xl">{project.title}</h3>
+        <h3 className="text-xl font-display line-clamp-1">{project.title}</h3>
       </div>
-      <p className="font-medium mb-1 text-lg text-primary-500/90 tracking-wide line-clamp-2 w-full">
+      <p className="w-full mb-1 text-lg font-medium tracking-wide text-primary-500/90 line-clamp-2">
         {project.description}
       </p>
-      <div className="flex items-start justify-start gap-2 flex-wrap">
+      <div className="flex flex-wrap items-start justify-start gap-2">
         {filteredTechs.map((tech) => (
           <p
             className="text-sm font-medium min-w-fit py-1 px-1.5 rounded-full border border-primary-500 transition-colors hover:bg-primary-500 hover:text-purple-900"

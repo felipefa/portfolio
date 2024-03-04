@@ -1,5 +1,6 @@
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
+import { twMerge } from 'tailwind-merge';
 
 import { audiowide, sourceSans } from '@/shared/fonts';
 
@@ -19,7 +20,11 @@ export default function RootLayout({
     <html lang="en">
       <SpeedInsights />
       <body
-        className={`${audiowide.variable} ${sourceSans.variable} antialiased`}
+        className={twMerge(
+          'antialiased',
+          audiowide.variable,
+          sourceSans.variable
+        )}
       >
         {children}
       </body>

@@ -9,10 +9,11 @@ import { HTMLAttributes } from 'react';
 
 import { MenuItem } from '@/components/menuItem';
 
-export function MenuOptions({
-  closeMenu,
-  ...props
-}: HTMLAttributes<HTMLDivElement> & { closeMenu?: () => void }) {
+interface MenuOptionsProps extends HTMLAttributes<HTMLDivElement> {
+  closeMenu?: () => void;
+}
+
+export function MenuOptions({ closeMenu, ...props }: MenuOptionsProps) {
   return (
     <div {...props}>
       <MenuItem href="#about" onClick={closeMenu}>

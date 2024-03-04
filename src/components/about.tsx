@@ -10,16 +10,16 @@ export function About() {
 
   return (
     <section
-      className="flex flex-1 flex-col xl:flex-row items-center justify-center min-h-svh h-svh"
+      className="flex flex-col items-center justify-center flex-1 xl:flex-row min-h-svh h-svh"
       id="about"
     >
       <SectionTitle className="mb-8 xl:mb-0 xl:-rotate-90">About</SectionTitle>
       <div className="border-primary-500/15 border-2 bg-purple-950 min-h-80 xl:max-h-96 min-w-80 w-[80%] lg:w-[70%] xl:w-[50%] max-w-6xl rounded-2xl shadow-2xl shadow-primary-500/15 flex flex-col overflow-hidden xl:-ml-28">
-        <div className="border-primary-500/15 border-b-2 flex items-center px-4 py-2">
+        <div className="flex items-center px-4 py-2 border-b-2 border-primary-500/15">
           <X className="mr-2" />
           <Minus className="mr-2" />
           <ArrowsOutSimple />
-          <p className="text-center flex-1 text-lg -ml-16">code</p>
+          <p className="flex-1 -ml-16 text-lg text-center">code</p>
         </div>
         <div className="flex flex-1">
           <SyntaxHighlighter

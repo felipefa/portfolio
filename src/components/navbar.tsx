@@ -2,6 +2,7 @@
 
 import { IconContext, List, X } from '@phosphor-icons/react';
 import React from 'react';
+import { twMerge } from 'tailwind-merge';
 
 import { Logo } from '@/components/logo';
 import { MenuOptions } from '@/components/menuOptions';
@@ -22,11 +23,12 @@ export function Navbar() {
       }}
     >
       <nav
-        className={`sticky top-0 z-50 transition-colors bg-gradient-to-b from-purple-950 to-100% ${
+        className={twMerge(
+          'sticky top-0 z-50 transition-colors bg-gradient-to-b from-purple-950 to-100%',
           isMenuOpen ? 'bg-purple-950' : ''
-        }`}
+        )}
       >
-        <div className="flex items-center justify-between py-4 px-6">
+        <div className="flex items-center justify-between px-6 py-4">
           <div className="flex flex-1">
             <Logo onClick={isMenuOpen ? closeMenu : undefined} />
           </div>
@@ -34,21 +36,26 @@ export function Navbar() {
             className="text-xl uppercase"
             onClick={isMenuOpen ? closeMenu : openMenu}
           >
-            <span className={`${isMenuOpen ? 'hidden' : 'flex'} xl:hidden`}>
-              <List className="mr-2 mt-1" />
+            <span
+              className={twMerge('xl:hidden', isMenuOpen ? 'hidden' : 'flex')}
+            >
+              <List className="mt-1 mr-2" />
               Menu
             </span>
-            <span className={`${isMenuOpen ? 'flex' : 'hidden'} xl:hidden`}>
-              <X className="mr-2 mt-1" />
+            <span
+              className={twMerge('xl:hidden', isMenuOpen ? 'flex' : 'hidden')}
+            >
+              <X className="mt-1 mr-2" />
               Close
             </span>
           </button>
-          <MenuOptions className="hidden xl:flex justify-center" />
+          <MenuOptions className="justify-center hidden xl:flex" />
         </div>
         <MenuOptions
-          className={`${
+          className={twMerge(
+            'items-center justify-center pb-4 border-primary-500/15 border-b-2 mb-8',
             isMenuOpen ? 'flex flex-col' : 'hidden'
-          } items-center justify-center pb-4 border-primary-500/15 border-b-2 mb-8`}
+          )}
           closeMenu={closeMenu}
         />
       </nav>

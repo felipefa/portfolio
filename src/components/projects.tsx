@@ -4,9 +4,9 @@ import { projects } from '@/shared/data/projects';
 
 export function Projects() {
   return (
-    <section className="flex flex-col min-h-svh pt-24 pb-8 gap-8" id="projects">
+    <section className="flex flex-col gap-8 pt-24 pb-8 min-h-svh" id="projects">
       <SectionTitle>Projects</SectionTitle>
-      <div className="flex-1 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 px-8 max-w-6xl w-full mx-auto">
+      <div className="grid flex-1 w-full max-w-6xl grid-cols-1 gap-8 px-8 mx-auto md:grid-cols-2 xl:grid-cols-3">
         {projects.map((project) => (
           <ProjectCard key={project.key} project={project} />
         ))}

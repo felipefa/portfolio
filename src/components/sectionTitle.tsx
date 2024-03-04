@@ -1,4 +1,5 @@
 import React from 'react';
+import { twMerge } from 'tailwind-merge';
 
 export function SectionTitle({
   children,
@@ -10,7 +11,10 @@ export function SectionTitle({
 >) {
   return (
     <h2
-      className={`font-display text-center text-primary-500 text-5xl md:text-6xl lg:text-7xl xl:text-8xl ${className}`}
+      className={twMerge(
+        'font-display text-center text-primary-500 text-5xl md:text-6xl lg:text-7xl xl:text-8xl',
+        className
+      )}
       {...props}
     >
       {children}
