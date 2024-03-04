@@ -9,7 +9,7 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
-  const [showAllTechs, setShowAllTechs] = React.useState(window.innerWidth < 768);
+  const [showAllTechs, setShowAllTechs] = React.useState(false);
 
   const hasMoreThan3Techs = project.tech.length > 3;
 
@@ -22,6 +22,20 @@ export function ProjectCard({ project }: ProjectCardProps) {
   function handleShowAllTechs() {
     setShowAllTechs(true);
   }
+
+  React.useEffect(() => {
+    const checkWindowSize = () => {
+      setShowAllTechs(window.innerWidth < 768);
+    };
+
+    checkWindowSize();
+
+    window.addEventListener('resize', checkWindowSize);
+
+    return () => {
+      window.removeEventListener('resize', checkWindowSize);
+    };
+  }, []);
 
   return (
     <div className="bg-purple-900/50 flex flex-col gap-5 p-6 rounded-xl hover:ring-2 hover:ring-primary-500 hover:shadow-2xl hover:shadow-primary-500/20 transition-all cursor-pointer">
