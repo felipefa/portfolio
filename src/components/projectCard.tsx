@@ -9,7 +9,7 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
-  const [showAllTechs, setShowAllTechs] = React.useState(false);
+  const [showAllTechs, setShowAllTechs] = React.useState(window.innerWidth < 768);
 
   const hasMoreThan3Techs = project.tech.length > 3;
 
