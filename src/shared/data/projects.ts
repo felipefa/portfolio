@@ -1,3 +1,7 @@
+export const allTechnologies = ['Android Studio', 'AppCenter', 'ChatGPT', 'Cypress', 'EJS', 'Expo', 'Express.js', 'Firebase', 'GSAP', 'Google AdMob', 'Google Cloud Vision', 'Husky', 'Ionic 3', 'Java', 'Jest', 'MaterialUI', 'MongoDB', 'MySQL', 'Next.js', 'Node.js', 'React Native', 'React Testing Library', 'React.js', 'Redux', 'Redux Saga', 'Redux Toolkit', 'Rive', 'SQLite', 'Storybook', 'Styled Components', 'Tailwind CSS', 'TypeScript', 'Vercel', 'Web Speech API', 'WebSocket'] as const;
+
+type Technology = typeof allTechnologies[number];
+
 export interface Project {
   key: string;
   description: string;
@@ -5,7 +9,7 @@ export interface Project {
   date: Date;
   github?: string;
   link?: string;
-  tech: string[];
+  tech: Technology[];
 }
 
 export const projects: Project[] = [
@@ -16,7 +20,7 @@ export const projects: Project[] = [
     date: new Date('2024-02-01'),
     github: 'https://github.com/felipefa/react-notes',
     link: 'https://react-audio-notes.vercel.app/',
-    tech: ['React.js', 'TypeScript', 'Web Speech API', 'TailwindCSS', 'Vercel'],
+    tech: ['React.js', 'TypeScript', 'Web Speech API', 'Tailwind CSS', 'Vercel'],
   },
   {
     key: 'hans',
@@ -67,7 +71,7 @@ export const projects: Project[] = [
     title: 'VAPA Landing Page',
     date: new Date('2020-11-01'),
     link: 'https://www.vapa.ai',
-    tech: ['React.js', 'TailwindCSS', 'GSAP'],
+    tech: ['React.js', 'Tailwind CSS', 'GSAP'],
   },
   {
     key: 'skipt',
