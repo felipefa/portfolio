@@ -7,7 +7,7 @@ export function Projects() {
     <section className="flex flex-col gap-8 pt-24 pb-8 min-h-svh" id="projects">
       <SectionTitle>Projects</SectionTitle>
       <div className="grid flex-1 w-full max-w-6xl grid-cols-1 gap-8 px-8 mx-auto md:grid-cols-2 xl:grid-cols-3">
-        {projects.map((project) => (
+        {Object.values(projects).map((project) => (
           <ProjectCard key={project.key} project={project} />
         ))}
       </div>
