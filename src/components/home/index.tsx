@@ -8,13 +8,13 @@ import './styles.css';
 export function Home() {
   return (
     <section
-      className="flex h-svh flex-col justify-center xl:justify-between xl:flex-row xl:w-4xl xl:mx-32"
+      className="flex flex-col justify-center h-svh xl:justify-between xl:flex-row xl:w-4xl xl:mx-32"
       id="home"
     >
-      <div className="flex xl:flex-1 flex-col items-center justify-center px-4 text-center mt-8 xl:mt-0">
+      <div className="flex flex-col items-center justify-center px-4 mt-8 text-center xl:flex-1 xl:mt-0">
         <SectionTitle className="whitespace-pre-line">
           {`Welcome\nto my\n`}
-          <span className="portfolio transition-all">portfolio!</span>
+          <span className="transition-all portfolio">portfolio!</span>
         </SectionTitle>
         <h2
           className={
@@ -24,10 +24,10 @@ export function Home() {
           Hi, I’m Felipe and I love building innovative software!
         </h2>
       </div>
-      <div className="flex xl:flex-1 items-center justify-center">
+      <div className="flex items-center justify-center xl:flex-1">
         <Image
           alt="3D isometric version of cyberpunk Köln"
-          className="hover:scale-110 transition-transform"
+          className="transition-transform hover:scale-110"
           height={600}
           priority
           src={KoelnImage}

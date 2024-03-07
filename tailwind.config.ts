@@ -9,12 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       animation: {
-        'opacity': 'opacity 1s ease-in-out',
+        opacity: 'opacity 1s ease-in-out',
+        contentShow: 'contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1)',
+        overlayShow: 'overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1)',
       },
       keyframes: {
+        contentShow: {
+          from: { opacity: '0', transform: 'translate(-50%, -48%) scale(0.96)' },
+          to: { opacity: '1', transform: 'translate(-50%, -50%) scale(1)' },
+        },
         opacity: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
+        },
+        overlayShow: {
+          from: { opacity: '0' },
+          to: { opacity: '1' },
         }
       },
       backgroundImage: {
@@ -23,7 +33,7 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        "primary": {
+        primary: {
           50: "#F2FDFC",
           100: "#E0FAF9",
           200: "#C2F5F2",
@@ -36,7 +46,7 @@ const config: Config = {
           900: "#116965",
           950: "#0D4F4C"
         },
-        "purple": {
+        purple: {
           50: "#EDE0F0",
           100: "#E6D3E9",
           200: "#D4B4DA",
@@ -51,7 +61,7 @@ const config: Config = {
         }
       },
       transitionDuration: {
-        'DEFAULT': '0.2s',
+        DEFAULT: '0.2s',
       },
     },
     fontFamily: {
