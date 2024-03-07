@@ -1,3 +1,5 @@
+import { Suspense } from 'react';
+
 import { ProjectCard } from '@/components/projectCard';
 import { SectionTitle } from '@/components/sectionTitle';
 import { projects } from '@/shared/data/projects';
@@ -8,7 +10,9 @@ export function Projects() {
       <SectionTitle>Projects</SectionTitle>
       <div className="grid flex-1 w-full max-w-6xl grid-cols-1 gap-8 px-8 mx-auto md:grid-cols-2 xl:grid-cols-3">
         {Object.values(projects).map((project) => (
-          <ProjectCard key={project.key} project={project} />
+          <Suspense fallback={<p>Loading...</p>} key={project.key}>
+            <ProjectCard project={project} />
+          </Suspense>
         ))}
       </div>
     </section>
