@@ -1,4 +1,4 @@
-export const allTechnologies = ['Android Studio', 'AppCenter', 'ChatGPT', 'Cypress', 'EJS', 'Expo', 'Express.js', 'Firebase', 'GSAP', 'Google AdMob', 'Google Cloud Vision', 'Husky', 'Ionic 3', 'Java', 'Jest', 'MaterialUI', 'MongoDB', 'MySQL', 'Next.js', 'Node.js', 'React Native', 'React Testing Library', 'React.js', 'Redux', 'Redux Saga', 'Redux Toolkit', 'Rive', 'SQLite', 'Storybook', 'Styled Components', 'Tailwind CSS', 'TypeScript', 'Vercel', 'Web Speech API', 'WebSocket'] as const;
+export const allTechnologies = ['Android Studio', 'AppCenter', 'ChatGPT', 'Cypress', 'EJS', 'Expo', 'Express.js', 'Firebase', 'GSAP', 'Google AdMob', 'Google Cloud Vision', 'Husky', 'Ionic 3', 'Java', 'Jest', 'MaterialUI', 'MongoDB', 'MySQL', 'Next.js', 'Node.js', 'React Native', 'React Testing Library', 'React.js', 'Redux', 'Redux Saga', 'Redux Toolkit', 'Rive', 'SQLite', 'Storybook', 'Styled Components', 'Supabase', 'Tailwind CSS', 'TypeScript', 'Vercel', 'Web Speech API', 'WebSocket'] as const;
 
 type Technology = typeof allTechnologies[number];
 
@@ -13,6 +13,14 @@ export interface Project {
 }
 
 export const projects: Record<string, Project> = {
+  'cooking': {
+    key: 'cooking',
+    description: `A mobile application designed to help users find recipes based on the ingredients they have at home. The app leverages the Supabase database to store and retrieve recipes, and React Native for cross-platform development. The project showcases my ability to create practical applications using modern technologies like Expo, TypeScript, and Supabase. The source code is openly available on GitHub.`,
+    title: 'Cooking',
+    date: new Date('2024-03-11'),
+    github: 'https://github.com/felipefa/cooking',
+    tech: ['React Native', 'TypeScript', 'Expo', 'Supabase'],
+  },
   'react-notes': {
     key: 'react-notes',
     description: `A versatile note-taking application built with React.js and TypeScript. It leverages the Web Speech API for automatic audio-to-text conversion, allowing users to dictate their notes. The application features a dark mode for comfortable viewing in low-light environments and a responsive design for optimal user experience across devices. Hosted on Vercel, the project demonstrates the application of modern frontend technologies in creating practical solutions. The source code is openly available on GitHub, and the application can be accessed here.`,
