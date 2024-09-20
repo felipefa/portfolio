@@ -1,4 +1,4 @@
-export const allTechnologies = ['Android Studio', 'AppCenter', 'ChatGPT', 'Cypress', 'EJS', 'Expo', 'Express.js', 'Firebase', 'GSAP', 'Google AdMob', 'Google Cloud Vision', 'Husky', 'Ionic 3', 'Java', 'Jest', 'MaterialUI', 'MongoDB', 'MySQL', 'Next.js', 'Node.js', 'React Native', 'React Testing Library', 'React.js', 'Redux', 'Redux Saga', 'Redux Toolkit', 'Rive', 'SQLite', 'Storybook', 'Styled Components', 'Supabase', 'Tailwind CSS', 'TypeScript', 'Vercel', 'Web Speech API', 'WebSocket'] as const;
+export const allTechnologies = ['Android Studio', 'AppCenter', 'ChatGPT', 'Cypress', 'EJS', 'Expo', 'Express.js', 'Firebase', 'GSAP', 'Google AdMob', 'Google Cloud Vision', 'Husky', 'Ionic 3', 'Java', 'Jest', 'MaterialUI', 'MongoDB', 'MySQL', 'Next.js', 'Node.js', 'React Native', 'React Testing Library', 'React.js', 'Redux', 'Redux Saga', 'Redux Toolkit', 'Rive', 'SQLite', 'Storybook', 'Styled Components', 'Supabase', 'Tailwind CSS', 'TypeScript', 'Vercel', 'Web Speech API', 'WebSocket', 'Zustand'] as const;
 
 type Technology = typeof allTechnologies[number];
 
@@ -13,6 +13,13 @@ export interface Project {
 }
 
 export const projects: Record<string, Project> = {
+  'zolar': {
+    key: 'zolar',
+    description: `A complete energy management system (EMS) solution, enabling users to monitor and optimise their solar power systems, manage electric vehicle charging, and control heat pump operations. With near real-time insights into total household energy consumption, it empowers users to maximise efficiency and reduce energy costs effortlessly.`,
+    title: 'Zolar Compass',
+    date: new Date('2024-03-15'),
+    tech: ['React Native', 'TypeScript', 'Firebase', 'Zustand'],
+  },
   'cooking': {
     key: 'cooking',
     description: `A mobile application designed to help users find recipes based on the ingredients they have at home. The app leverages the Supabase database to store and retrieve recipes, and React Native for cross-platform development. The project showcases my ability to create practical applications using modern technologies like Expo, TypeScript, and Supabase. The source code is openly available on GitHub.`,
