@@ -7,6 +7,7 @@ import { getExperienceAsString } from '@/shared/utils/getExperienceAsString';
 
 export function About() {
   const experience = getExperienceAsString();
+  const aboutMe = `{\n\t"name": "Felipe Araujo",\n\t"experience": "${experience}",\n\t"mainSkills": ["React Native", "React", "TypeScript", "JavaScript", "Node.js"],\n\t"education": "Bachelor in Computer Science",\n\t"currentLocation": "Cologne, Germany",\n\t"languages": ["English", "Portuguese"]\n}`;
 
   return (
     <section
@@ -24,15 +25,15 @@ export function About() {
         <div className="flex flex-1">
           <SyntaxHighlighter
             customStyle={{
-              backgroundColor: 'transparent',
-              minWidth: '100%',
+              backgroundColor: "transparent",
+              minWidth: "100%",
             }}
             language="json"
             showLineNumbers
             style={stackoverflowDark}
             wrapLines
           >
-            {`{\n\t"myName": "Felipe Araujo",\n\t"myExperience": "${experience}",\n\t"myMainSkills": ["React", "React Native", "TypeScript", "Node.js"],\n\t"myEducation": "Bachelor in Computer Science",\n\t"myCurrentLocation": "Cologne, Germany",\n\t"languages": ["English", "Portuguese"]\n}`}
+            {aboutMe}
           </SyntaxHighlighter>
         </div>
       </div>

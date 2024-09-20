@@ -37,7 +37,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
     router.push(`${pathname}?${newParams}${hash}`, { scroll: false });
   }, [pathname, project.key, router, searchParams]);
 
-  function handleShowAllTechs() {
+  function handleShowAllTechs(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    e.stopPropagation();
     setShowAllTechs(true);
   }
 
